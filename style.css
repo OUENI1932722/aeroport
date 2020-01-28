@@ -1,0 +1,83 @@
+html
+{
+    height: 100%;
+}
+body
+{
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+    height: 100%;
+}
+header
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 20%;
+    color: white;
+}
+#corps
+{
+    height: 60%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+#formulaireConnection
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 100%;
+}
+footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20%;
+}
+footer div
+{
+    font-size: 16pt;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: white;
+}
+input
+{
+    text-align: center;
+    padding: 2%;
+}
+#corps h1
+{
+    text-decoration-line: underline;
+    font-size: 32pt;
+}
+#login, #register
+{
+    text-align: center;
+    display: flex;
+    flex: 1 0 100%;
+    width: 100%;
+}
+td
+{
+    text-align: center;
+    font-size: 20pt;
+    width: 100%;
+}
+#footerDiv
+{
+    text-align: center;
+    padding: 0.5%;
+}
+img
+{
+    display: inline;
+}

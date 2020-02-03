@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="" ?>
+<Users>
+    <User>
+        <Nom>Ouellet-Duval</Nom>
+        <Prenom>Nicolas</Prenom>
+        <Email>oueni1932722@etu.cegepjonquiere.ca</Email>
+        <Password>tHiSiSaPaSsWoRd</Password>
+    </User>
+    <User>
+        <Nom>Thiffault</Nom>
+        <Prenom>Jérémie</Prenom>
+        <Email>bigjébestanime@ripxxtentacion.com</Email>
+        <Password>jesuistannedetreauregimeaidezmoiaaaaaa</Password>
+    </User>
+    <User>
+        <Nom>User</Nom>
+        <Prenom>Anonymous</Prenom>
+        <Email>sample@text.net</Email>
+        <Password>password</Password>
+    </User>
+</Users>

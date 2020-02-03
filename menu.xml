@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Liens>
+    <Lien>
+        <NomFR>Github</NomFR>
+        <NomEN>Github</NomEN>
+        <Url>https://github.com</Url>
+    </Lien>
+    <Lien>
+        <NomFR>Le Web Inutile</NomFR>
+        <NomEN>The Useless Web</NomEN>
+        <Url>https://theuselessweb.com</Url>
+    </Lien>
+    <Lien>
+        <NomFR>elgooG</NomFR>
+        <NomEN>elgooG</NomEN>
+        <Url>https://elgoog.im</Url>
+    </Lien>
+</Liens>

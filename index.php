@@ -13,19 +13,38 @@
 </header>
 <nav>
     <?php
-        $user = $_POST["user"];
-        echo("<div id='hello'><span>Bonjour, </span><a href='profile.php'>$user</a>!</div>
+    $xml = simplexml_load_file("./user.xml") or die();
+    foreach ($xml->children() as $user)
+    {
+        if (($user->Username) == ($_POST["user"]))
+        {
+            if (($user->Password) == ($_POST["password"])) {
+                echo("<span style='display:none;'>(Bon user, bon mdp)</span>");
+            }
+            else
+                echo("<span style='display:none;'>(Bon user, mauvais mdp)</span>");
+        }
+       else
+           echo("<span style='display:none;'>(Mauvais user)</span>");
+    }
+    $user = $_POST["user"];
+    echo("<div id='hello'><span>Bonjour, </span><a href='profile.php'>$user</a>!</div>
 <a href='login.php' class='lien'>Déconnexion</a>
 <a href='page.php' class='lien'>page</a>
-<a href='page.php' class='lien'>page</a>")
+<a href='page.php' class='lien'>page</a>");
         ?>
     </nav>
 <div id="corps">
     <aside>
         <ul>
-            <li><a href="page.php">Item 1</a></li>
-            <li><a href="page.php">Item 2</a></li>
-            <li><a href="page.php">Item 3</a></li>
+            <?php
+            $user = $_POST["user"];
+            $xml2 = simplexml_load_file("./menu.xml") or die();
+            foreach($xml2->children() as $lien)
+            {
+                echo("<li><a href='$lien->Url'>$lien->NomFR</a></li>");
+            }
+            ?>
         </ul>
     </aside>
     <section>

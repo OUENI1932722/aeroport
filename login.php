@@ -1,3 +1,6 @@
+<?php
+include 'sessionDeleter.php';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -6,16 +9,22 @@
     <title>Eyavabohmb Airport</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
-
+<?php
+include 'header.php';
+?>
 <body style="background-image: url(airplanes-background.jpg); background-size: cover">
 <header style="display: flex; flex-wrap: nowrap;">
-    <h2>Eyavabohmb Airport - We're the <span style="text-decoration-line: underline; font-style: italic; font-weight: bolder;">bomb</span> amongst the competition!</h2>
+    <h1>Eyavabohmb Airport - We're the <span style="text-decoration-line: underline; font-style: italic; font-weight: bolder;">bomb</span> amongst the competition!</h1>
 </header>
-<div id="corps">
+<div id="corps" style="height: 80%">
     <div id="formulaireConnection">
     <h1>Connexion</h1>
-    <form method="POST" action="index.php">
+        <form method="POST" action="index.php">
         <table id="formConnection">
+            <div id="boutonsLangue">
+                <label for="EN">Anglais</label><input type="radio" name="Langue" value="NomEN" id="EN">
+                <label for="FR">Français</label><input type="radio" name="Langue" value="NomFR" id="FR">
+            </div>
             <tr>
                 <td><label for="user">Username: </label></td><td><input type="text" id="user" name="user" placeholder="Username" required></td>
             </tr>
@@ -29,10 +38,9 @@
     </form>
     </div>
 </div>
-<footer>
-    <div>Fait par: Nicolas Ouellet-Duval</div>
-    <div>Contactez-nous: oueni1932722@etu.cegepjonquiere.qc.ca</div>
-</footer>
+<?php
+include 'footer.php';
+?>
 </body>
 
 </html>

@@ -1,3 +1,10 @@
+<?php
+session_start();
+$cookie_name = "Langue";
+$cookie_value = $_POST["Langue"];
+$cookie_expires = time() + 604800; //en secondes
+setcookie($cookie_name, $cookie_value, $cookie_expires);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -8,53 +15,20 @@
 </head>
 
 <body style="background-image: url(airplanes-background.jpg); background-size: cover">
-<header>
-    <h2 style="text-align: center;">Eyavabohmb Airport - We're the <span style="text-decoration-line: underline; font-style: italic; font-weight: bolder;">bomb</span> amongst the competition!</h2>
-</header>
-<nav>
     <?php
-    $xml = simplexml_load_file("./user.xml") or die();
-    foreach ($xml->children() as $user)
-    {
-        if (($user->Username) == ($_POST["user"]))
-        {
-            if (($user->Password) == ($_POST["password"])) {
-                echo("<span style='display:none;'>(Bon user, bon mdp)</span>");
-            }
-            else
-                echo("<span style='display:none;'>(Bon user, mauvais mdp)</span>");
-        }
-       else
-           echo("<span style='display:none;'>(Mauvais user)</span>");
-    }
-    $user = $_POST["user"];
-    echo("<div id='hello'><span>Bonjour, </span><a href='profile.php'>$user</a>!</div>
-<a href='login.php' class='lien'>Déconnexion</a>
-<a href='page.php' class='lien'>page</a>
-<a href='page.php' class='lien'>page</a>");
+    include 'header.php';
         ?>
-    </nav>
 <div id="corps">
-    <aside>
-        <ul>
             <?php
-            $user = $_POST["user"];
-            $xml2 = simplexml_load_file("./menu.xml") or die();
-            foreach($xml2->children() as $lien)
-            {
-                echo("<li><a href='$lien->Url'>$lien->NomFR</a></li>");
-            }
+            include 'menu.php';
             ?>
-        </ul>
-    </aside>
     <section>
         <div>test</div>
     </section>
 </div>
-<footer>
-        <div>Fait par: Nicolas Ouellet-Duval</div>
-        <div>Contactez-nous: oueni1932722@etu.cegepjonquiere.qc.ca</div>
-</footer>
+    <?php
+    include 'footer.php';
+    ?>
 </body>
 
 </html>

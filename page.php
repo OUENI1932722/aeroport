@@ -1,7 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: oueni1932722
- * Date: 2020-02-02
- * Time: 16:23
- */
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Eyavabohmb Airport</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<?php
+include 'header.php';
+include 'footer.php';
+?>
+</body>
+</html>
+
